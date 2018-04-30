@@ -1,7 +1,7 @@
 package config
 
 // Config -- config.v1 is a shared configuration for Paybox Vending Platform
-// Use by other service and application on 
+// Use by other service and application on
 // - /payboxth/ota
 // - /payboxth/vending
 // - /payboxth/cloud
@@ -79,3 +79,27 @@ type changeRefillValue struct {
 	V500  int `json:"v500,omitempty"`
 	V1000 int `json:"v1000,omitempty"`
 }
+
+// LoadDB load config from BadgerDB instead of file toml
+// func (c *Config) LoadDB(db *badger.DB) error {
+// 	err := db.Update(func(txn *badger.Txn) error {
+// 		item, err := txn.Get([]byte("config"))
+// 		if err != nil {
+// 			log.Warnf("ยังไม่มี Config บันทึกใน DB. error: %v", err)
+// 			return err
+// 		}
+// 		val, err := item.Value()
+// 		if err != nil {
+// 			log.Errorf("Error item.Value(): %v", err)
+// 			return err
+// 		}
+// 		err = json.Unmarshal(val, &c)
+// 		if err != nil {
+// 			log.Errorf("Error Unmarshal JSON: %v", err)
+// 			return err
+// 		}
+// 		return nil
+// 	})
+// 	log.Infof("config.loadDB: OK config = %v", c)
+// 	return err
+// }
