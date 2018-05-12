@@ -31,14 +31,16 @@ type host struct {
 }
 
 type client struct {
-	ShopTitle      string `json:"shop_title,omitempty"`
-	ShopWebsite    string `json:"shop_website,omitempty"`
-	LogoImageWidth int    `json:"logo_image_width,omitempty"`
-	APIServerURL   string `json:"api_server_url,omitempty"`
-	CloudServerURL string `json:"cloud_server_url,omitempty"`
-	DataURL        string `json:"data_url,omitempty"`
-	LogoPath       string `json:"logo_path,omitempty"`
-	ImagePath      string `json:"image_path,omitempty"`
+	LogoImageWidth    int    `json:"logo_image_width,omitempty"`
+	ShopTitle         string `json:"shop_title,omitempty"`
+	ShopWebsite       string `json:"shop_website,omitempty"`
+	APIServerURL      string `json:"api_server_url,omitempty"`
+	CloudServerURL    string `json:"cloud_server_url,omitempty"`
+	DevAPIServerURL   string `json:"dev_api_server_url,omitempty"`
+	DevCloudServerURL string `json:"dev_cloud_server_url,omitempty"`
+	DataURL           string `json:"data_url,omitempty"`
+	LogoPath          string `json:"logo_path,omitempty"`
+	ImagePath         string `json:"image_path,omitempty"`
 }
 
 type hardware struct {
