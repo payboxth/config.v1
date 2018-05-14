@@ -7,6 +7,10 @@ package config
 // - /payboxth/cloud
 // - /payboxth/android
 type Config struct {
+	APIServerURL      string            `json:"api_server_url,omitempty"`
+	CloudServerURL    string            `json:"cloud_server_url,omitempty"`
+	DevAPIServerURL   string            `json:"dev_api_server_url,omitempty"`
+	DevCloudServerURL string            `json:"dev_cloud_server_url,omitempty"`
 	TimeServers       []string          `json:"time_servers,omitempty"`
 	OTP               otp               `json:"otp,omitempty"`
 	Host              host              `json:"host,omitempty"`
@@ -31,16 +35,12 @@ type host struct {
 }
 
 type client struct {
-	LogoImageWidth    int    `json:"logo_image_width,omitempty"`
-	ShopTitle         string `json:"shop_title,omitempty"`
-	ShopWebsite       string `json:"shop_website,omitempty"`
-	APIServerURL      string `json:"api_server_url,omitempty"`
-	CloudServerURL    string `json:"cloud_server_url,omitempty"`
-	DevAPIServerURL   string `json:"dev_api_server_url,omitempty"`
-	DevCloudServerURL string `json:"dev_cloud_server_url,omitempty"`
-	DataURL           string `json:"data_url,omitempty"`
-	LogoPath          string `json:"logo_path,omitempty"`
-	ImagePath         string `json:"image_path,omitempty"`
+	LogoImageWidth int    `json:"logo_image_width,omitempty"`
+	ShopTitle      string `json:"shop_title,omitempty"`
+	ShopWebsite    string `json:"shop_website,omitempty"`
+	DataURL        string `json:"data_url,omitempty"`
+	LogoPath       string `json:"logo_path,omitempty"`
+	ImagePath      string `json:"image_path,omitempty"`
 }
 
 type hardware struct {
