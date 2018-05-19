@@ -35,12 +35,15 @@ type host struct {
 }
 
 type client struct {
-	LogoImageWidth int    `json:"logo_image_width,omitempty"`
-	ShopTitle      string `json:"shop_title,omitempty"`
-	ShopWebsite    string `json:"shop_website,omitempty"`
-	DataURL        string `json:"data_url,omitempty"`
-	LogoPath       string `json:"logo_path,omitempty"`
-	ImagePath      string `json:"image_path,omitempty"`
+	LogoImageWidth        int    `json:"logo_image_width,omitempty"`
+	ShopTitle             string `json:"shop_title,omitempty"`
+	ShopWebsite           string `json:"shop_website,omitempty"`
+	DataURL               string `json:"data_url,omitempty"`
+	LogoPath              string `json:"logo_path,omitempty"`
+	ImagePath             string `json:"image_path,omitempty"` 
+	PrintQueueReceiptMode int    `json:"print_queue_receipt_mode,omitempty"` //โหมดการพิมพ์ใบเสร็จ 1  พิมพ์ใบเสร็จและบัตรคิว 2 เฉพาะบัตรคิว
+	ChangeNoteValue       int    `json:"change_note_value,omitempty"` //ประเภทธนบัตรที่ใช้ทอน เช่น 20 หรือ 50 หรือ 100
+	HasNoteDispenser      bool   `json:"has_note_dispenser,omitempty"`//ร้านค้าใช้เครื่องทอนธนบัตรหรือไม่?
 }
 
 type hardware struct {
