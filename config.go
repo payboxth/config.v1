@@ -19,6 +19,7 @@ type Config struct {
 	Cash              cash              `json:"cash,omitempty"`
 	CashAcceptedValue cashAcceptedValue `json:"cash_accepted_value,omitempty"`
 	ChangeRefillValue changeRefillValue `json:"change_refill_value,omitempty"`
+	LastRequestTime   int64             `json:"last_request_time"`
 }
 
 type otp struct {
