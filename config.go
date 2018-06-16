@@ -15,6 +15,7 @@ type Config struct {
 	OTP               otp               `json:"otp,omitempty"`
 	Host              host              `json:"host,omitempty"`
 	Client            client            `json:"client,omitempty"`
+	VendingType       vendingType       `json:"vending_type,omitempty"`
 	Hardware          hardware          `json:"hardware,omitempty"`
 	Cash              cash              `json:"cash,omitempty"`
 	CashAcceptedValue cashAcceptedValue `json:"cash_accepted_value,omitempty"`
@@ -48,6 +49,20 @@ type client struct {
 	PrintQueueReceiptMode int    `json:"print_queue_receipt_mode,omitempty"` //โหมดการพิมพ์ใบเสร็จ 1  พิมพ์ใบเสร็จและบัตรคิว 2 เฉพาะบัตรคิว
 	ChangeNoteValue       int    `json:"change_note_value,omitempty"`        //ประเภทธนบัตรที่ใช้ทอน เช่น 20 หรือ 50 หรือ 100
 	HasNoteDispenser      bool   `json:"has_note_dispenser,omitempty"`       //ร้านค้าใช้เครื่องทอนธนบัตรหรือไม่?
+}
+
+type vendingType struct {
+	Code                  string `json:"code,omitempty"`
+	Name                  string `json:"name,omitempty"`
+	HasNoteDispenser      bool   `json:"has_note_dispenser,omitempty"`
+	StatusPollingInterval int    `json:"status_polling_interval,omitempty"`
+	EventPollingInterval  int    `json:"event_polling_interval,omitempty"`
+	CctalkBaudrate        int    `json:"cctalk_baudrate,omitempty"`
+	CctalkPort            string `json:"cctalk_port,omitempty"`
+	PrinterPort           string `json:"printer_port,omitempty"`
+	GpioPort              string `json:"gpio_port,omitempty"`
+	NoteDispenserPort     string `json:"note_dispenser_port,omitempty"`
+	QrReaderPort          string `json:"qr_reader_port,omitempty"`
 }
 
 type hardware struct {
