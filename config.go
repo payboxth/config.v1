@@ -32,6 +32,7 @@ type host struct {
 	VendingID        int    `json:"vending_id,omitempty"`
 	XAccessToken     string `json:"x_access_token,omitempty"`
 	MockXAccessToken string `json:"mock_x_access_token,omitempty"`
+	VendingType      string `json:"vending_type,omitempty"`
 }
 
 type client struct {
@@ -50,6 +51,7 @@ type client struct {
 }
 
 type hardware struct {
+	VendingType           string
 	StatusPollingInterval int    `json:"status_polling_interval,omitempty"`
 	EventPollingInterval  int    `json:"event_polling_interval,omitempty"`
 	CctalkBaudrate        int    `json:"cctalk_baudrate,omitempty"`
@@ -58,6 +60,8 @@ type hardware struct {
 	GpioPort              string `json:"gpio_port,omitempty"`
 	NoteDispenserPort     string `json:"note_dispenser_port,omitempty"`
 	QrReaderPort          string `json:"qr_reader_port,omitempty"`
+	SW1FrontDoorEnable    bool   `json:"sw1_front_door_enable"`
+	SW2CashBoxEnable      bool   `json:"sw2_cash_box_enable"`
 }
 
 type cash struct {
