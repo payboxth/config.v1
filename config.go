@@ -32,7 +32,6 @@ type host struct {
 	VendingID        int    `json:"vending_id,omitempty"`
 	XAccessToken     string `json:"x_access_token,omitempty"`
 	MockXAccessToken string `json:"mock_x_access_token,omitempty"`
-	VendingType      string `json:"vending_type,omitempty"`
 }
 
 type client struct {
